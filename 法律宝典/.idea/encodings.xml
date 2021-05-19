@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/LayerBook/MainForm.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/LayerBook/SearchForm.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/LayerBook/SecondlyForm.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/LayerBook/ThirdForm.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/AddButtonToJScrollPane.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/GridBagLayout_test.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/Notepad.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/TreeAndLink.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/TreeDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/input_test.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_ChangePartTextColor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_ChangeSelectTextColor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_DirectoryTree.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_ManyTextPane.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_PartTextColor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_TextLocationAndAddPartTextColor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_TreeAndTL_with_PTC.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_getComputerSize.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_movepicture.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/test_runnable.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/test/testl_link.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
