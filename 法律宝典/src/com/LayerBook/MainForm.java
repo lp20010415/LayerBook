@@ -10,49 +10,49 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainForm extends JFrame implements ActionListener {
-	//µçÄÔÆÁÄ»Ïà¹ØÊıÖµ----ÊµÏÖ³ÌĞò´ó¸ÅÔÚÆÁÄ»ÖĞ¼ä
+	//ç”µè„‘å±å¹•ç›¸å…³æ•°å€¼----å®ç°ç¨‹åºå¤§æ¦‚åœ¨å±å¹•ä¸­é—´
 	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	int screenWidth = (int)screenSize.getWidth();//»ñÈ¡µçÄÔÆÁÄ»µÄ¿í
-	int screenHeight = (int)screenSize.getHeight();//»ñÈ¡µçÄÔÆÁÄ»µÄ¸ß
+	int screenWidth = (int)screenSize.getWidth();//è·å–ç”µè„‘å±å¹•çš„å®½
+	int screenHeight = (int)screenSize.getHeight();//è·å–ç”µè„‘å±å¹•çš„é«˜
 
-	//½ø¶ÈÌõ¶¨ÒåÊıÖµ
+	//è¿›åº¦æ¡å®šä¹‰æ•°å€¼
 	int JProgressBarMax = 100;
 	int JProgressBarMin = 0;
 	int JProgressBarValue = JProgressBarMin;
-	//»ğ²ñÈËÎ»ÖÃÊıÖµ
+	//ç«æŸ´äººä½ç½®æ•°å€¼
 	int pictureLocationX = 25;
 	int pictureLocationY = 300;
 
 	Timer t = new Timer();
-	//Æô¶¯×é¼ş
-	JLabel NationalEmblem = new JLabel();//¹ú»Õ
-	JLabel Matchman = new JLabel();//»ğ²ñÈË
-	JProgressBar jpb = new JProgressBar();//½ø¶ÈÌõ
-	JLabel jpbDownText = new JLabel("ÕıÔÚ½øÈë³ÌĞò",0);//½ø¶ÈÌõÏÂÎÄ×Ö
-	JLabel leftText = new JLabel("<html><body>Ñ§<br>·¨<br>&nbsp;<br>ÊØ<br>·¨</body></html>",0);//×ó±ßÎÄ×Ö
-	JLabel rightText = new JLabel("<html><body>¶®<br>·¨<br>&nbsp;<br>ÓÃ<br>·¨</body></html>",0);//ÓÒ±ßÎÄ×Ö
-	//Æô¶¯Í¼Æ¬
-	ImageIcon MatchmanPicture = new ImageIcon("./images/ËõĞ¡°æ¶À»ğ²ñÈË.gif");
-	ImageIcon NationalEmblemPicture = new ImageIcon("./images/¹ú»Õ.jpg");
+	//å¯åŠ¨ç»„ä»¶
+	JLabel NationalEmblem = new JLabel();//å›½å¾½
+	JLabel Matchman = new JLabel();//ç«æŸ´äºº
+	JProgressBar jpb = new JProgressBar();//è¿›åº¦æ¡
+	JLabel jpbDownText = new JLabel("æ­£åœ¨è¿›å…¥ç¨‹åº",0);//è¿›åº¦æ¡ä¸‹æ–‡å­—
+	JLabel leftText = new JLabel("<html><body>å­¦<br>æ³•<br>&nbsp;<br>å®ˆ<br>æ³•</body></html>",0);//å·¦è¾¹æ–‡å­—
+	JLabel rightText = new JLabel("<html><body>æ‡‚<br>æ³•<br>&nbsp;<br>ç”¨<br>æ³•</body></html>",0);//å³è¾¹æ–‡å­—
+	//å¯åŠ¨å›¾ç‰‡
+	ImageIcon MatchmanPicture = new ImageIcon("./images/ç¼©å°ç‰ˆç‹¬ç«æŸ´äºº.gif");
+	ImageIcon NationalEmblemPicture = new ImageIcon("./images/å›½å¾½.jpg");
 
-	//²Ù×÷×é¼ş
-	JLabel topText = new JLabel("·¨ÂÉÀàĞÍ",0);
-	JButton Person = new JButton("¸öÈË");
-	JButton Country = new JButton("¹ú¼Ò");
-	JButton Natural = new JButton("×ÔÈ»");
-	JButton FoodSafe = new JButton("Ê³Æ·°²È«");
-	JButton Business = new JButton("½»Ò×");
-	JButton SearchAll = new JButton("¼ìË÷ËùÓĞ·¨ÂÉ");
-	//²Ù×÷½çÃæÏà¹ØÊı¾İ
-	int btnWidth = 250;//°´Å¥¿í¶È
-	int btnHeight = 60;//°´Å¥¸ß¶È
-	//°´Å¥Í¼Æ¬
-	ImageIcon pIcon = new ImageIcon("./images/¸öÈË.png");
-	ImageIcon cIcon = new ImageIcon("./images/¹ú¼Ò.png");
-	ImageIcon nIcon = new ImageIcon("./images/×ÔÈ».png");
-	ImageIcon fIcon = new ImageIcon("./images/Ê³Æ·°²È«.png");
-	ImageIcon bIcon = new ImageIcon("./images/½»Ò×.png");
-	ImageIcon sIcon = new ImageIcon("./images/ËÑË÷.png");
+	//æ“ä½œç»„ä»¶
+	JLabel topText = new JLabel("æ³•å¾‹ç±»å‹",0);
+	JButton Person = new JButton("ä¸ªäºº");
+	JButton Country = new JButton("å›½å®¶");
+	JButton Natural = new JButton("è‡ªç„¶");
+	JButton FoodSafe = new JButton("é£Ÿå“å®‰å…¨");
+	JButton Business = new JButton("äº¤æ˜“");
+	JButton SearchAll = new JButton("æ£€ç´¢æ‰€æœ‰æ³•å¾‹");
+	//æ“ä½œç•Œé¢ç›¸å…³æ•°æ®
+	int btnWidth = 250;//æŒ‰é’®å®½åº¦
+	int btnHeight = 60;//æŒ‰é’®é«˜åº¦
+	//æŒ‰é’®å›¾ç‰‡
+	ImageIcon pIcon = new ImageIcon("./images/ä¸ªäºº.png");
+	ImageIcon cIcon = new ImageIcon("./images/å›½å®¶.png");
+	ImageIcon nIcon = new ImageIcon("./images/è‡ªç„¶.png");
+	ImageIcon fIcon = new ImageIcon("./images/é£Ÿå“å®‰å…¨.png");
+	ImageIcon bIcon = new ImageIcon("./images/äº¤æ˜“.png");
+	ImageIcon sIcon = new ImageIcon("./images/æœç´¢.png");
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -60,63 +60,63 @@ public class MainForm extends JFrame implements ActionListener {
 	}
 	MainForm(){
 
-		///Æô¶¯½çÃæ
-		//¹ú»ÕÍ¼Æ¬
+		///å¯åŠ¨ç•Œé¢
+		//å›½å¾½å›¾ç‰‡
 		NationalEmblemPicture.setImage(NationalEmblemPicture.getImage().getScaledInstance(200,200,0));
 		NationalEmblem.setIcon(NationalEmblemPicture);
 		NationalEmblem.setBounds(98,30,200,200);
-		//×ó±ßÎÄ×Ö
+		//å·¦è¾¹æ–‡å­—
 		leftText.setBounds(0,0,70,180);
-		leftText.setFont(new Font("ËÎÌå",1,30));
-		//ÓÒ±ßÎÄ×Ö
+		leftText.setFont(new Font("å®‹ä½“",1,30));
+		//å³è¾¹æ–‡å­—
 		rightText.setBounds(330,0,70,180);
-		rightText.setFont(new Font("ËÎÌå",1,30));
-		//»ğ²ñÈËÍ¼Æ¬
+		rightText.setFont(new Font("å®‹ä½“",1,30));
+		//ç«æŸ´äººå›¾ç‰‡
 		Matchman.setIcon(MatchmanPicture);
 		Matchman.setBounds(pictureLocationX,pictureLocationY,MatchmanPicture.getIconWidth(),MatchmanPicture.getIconHeight());
-		//½ø¶ÈÌõ
+		//è¿›åº¦æ¡
 		jpb.setMaximum(JProgressBarMax);
 		jpb.setMinimum(JProgressBarMin);
 		jpb.setValue(JProgressBarValue);
 		jpb.setBounds(pictureLocationX+25,pictureLocationY+MatchmanPicture.getIconHeight(),300,50);
 		jpb.setStringPainted(true);
-		//½ø¶ÈÌõÏÂÎÄ×Ö
-		jpbDownText.setFont(new Font("ËÎÌå",1,25));
+		//è¿›åº¦æ¡ä¸‹æ–‡å­—
+		jpbDownText.setFont(new Font("å®‹ä½“",1,25));
 		jpbDownText.setBounds(jpb.getX(),jpb.getY()+jpb.getHeight(),jpb.getWidth(),jpb.getHeight());
 
-		///²Ù×÷½çÃæ
-		//ÎÄ±¾Ïà¹ØÉèÖÃ
+		///æ“ä½œç•Œé¢
+		//æ–‡æœ¬ç›¸å…³è®¾ç½®
 		topText.setBounds(75,0,btnWidth,btnHeight);
-		topText.setFont(new Font("ËÎÌå",1,35));
-		//°´Å¥´óĞ¡Î»ÖÃÉèÖÃ
+		topText.setFont(new Font("å®‹ä½“",1,35));
+		//æŒ‰é’®å¤§å°ä½ç½®è®¾ç½®
 		Person.setBounds(75,btnHeight,btnWidth,btnHeight);
 		Country.setBounds(75,btnHeight*2+2,btnWidth,btnHeight);
 		Natural.setBounds(75,btnHeight*3+4,btnWidth,btnHeight);
 		FoodSafe.setBounds(75,btnHeight*4+6,btnWidth,btnHeight);
 		Business.setBounds(75,btnHeight*5+8,btnWidth,btnHeight);
 		SearchAll.setBounds(75,btnHeight*6+10,btnWidth,btnHeight);
-		//°´Å¥ÎÄ×Ö´óĞ¡ÉèÖÃ
-		Person.setFont(new Font("ËÎÌå",1,20));
-		Country.setFont(new Font("ËÎÌå",1,20));
-		Natural.setFont(new Font("ËÎÌå",1,20));
-		FoodSafe.setFont(new Font("ËÎÌå",1,20));
-		Business.setFont(new Font("ËÎÌå",1,20));
-		SearchAll.setFont(new Font("ËÎÌå",1,20));
-		//°´Å¥Í¼Æ¬ÉèÖÃ
+		//æŒ‰é’®æ–‡å­—å¤§å°è®¾ç½®
+		Person.setFont(new Font("å®‹ä½“",1,20));
+		Country.setFont(new Font("å®‹ä½“",1,20));
+		Natural.setFont(new Font("å®‹ä½“",1,20));
+		FoodSafe.setFont(new Font("å®‹ä½“",1,20));
+		Business.setFont(new Font("å®‹ä½“",1,20));
+		SearchAll.setFont(new Font("å®‹ä½“",1,20));
+		//æŒ‰é’®å›¾ç‰‡è®¾ç½®
 		pIcon.setImage(pIcon.getImage().getScaledInstance(50,50,0));
 		cIcon.setImage(cIcon.getImage().getScaledInstance(50,50,0));
 		nIcon.setImage(nIcon.getImage().getScaledInstance(50,50,0));
 		fIcon.setImage(fIcon.getImage().getScaledInstance(50,50,0));
 		bIcon.setImage(bIcon.getImage().getScaledInstance(50,50,0));
 		sIcon.setImage(sIcon.getImage().getScaledInstance(50,50,0));
-		//°´Å¥Ê¹ÓÃÍ¼Æ¬ÉèÖÃ
+		//æŒ‰é’®ä½¿ç”¨å›¾ç‰‡è®¾ç½®
 		Person.setIcon(pIcon);
 		Country.setIcon(cIcon);
 		Natural.setIcon(nIcon);
 		FoodSafe.setIcon(fIcon);
 		Business.setIcon(bIcon);
 		SearchAll.setIcon(sIcon);
-		//°´Å¥Ìí¼Ó¼àÌıÊÂ¼ş
+		//æŒ‰é’®æ·»åŠ ç›‘å¬äº‹ä»¶
 		Person.addActionListener(this);
 		Country.addActionListener(this);
 		Natural.addActionListener(this);
@@ -129,20 +129,20 @@ public class MainForm extends JFrame implements ActionListener {
 			}
 		});
 
-		//»ğ²ñÈËÒÆ¶¯Ê±¼äÖÜÆÚ
+		//ç«æŸ´äººç§»åŠ¨æ—¶é—´å‘¨æœŸ
 		t.scheduleAtFixedRate(new TimerTask() {
 			@Override
 			public void run() {
 				if(JProgressBarValue<JProgressBarMax){
-					JProgressBarValue+=50;//Ä¬ÈÏÎª2
+					JProgressBarValue+=2;//é»˜è®¤ä¸º2
 					jpb.setValue(JProgressBarValue);
 					pictureLocationX+=6;
 					Matchman.setLocation(pictureLocationX,pictureLocationY);
 					jpbDownText.setText(jpbDownText.getText()+".");
-					if(jpbDownText.getText().equals("ÕıÔÚ½øÈë³ÌĞò........"))
-						jpbDownText.setText("ÕıÔÚ½øÈë³ÌĞò");
+					if(jpbDownText.getText().equals("æ­£åœ¨è¿›å…¥ç¨‹åº........"))
+						jpbDownText.setText("æ­£åœ¨è¿›å…¥ç¨‹åº");
 				}else if(JProgressBarValue == JProgressBarMax){
-					//ÒÆ³ıÆô¶¯×é¼ş
+					//ç§»é™¤å¯åŠ¨ç»„ä»¶
 					remove(leftText);
 					remove(rightText);
 					remove(NationalEmblem);
@@ -151,7 +151,7 @@ public class MainForm extends JFrame implements ActionListener {
 					remove(jpbDownText);
 					repaint();
 					t.cancel();
-					//Ìí¼Ó²Ù×÷×é¼ş
+					//æ·»åŠ æ“ä½œç»„ä»¶
 					add(topText);
 					add(Person);
 					add(Country);
@@ -170,7 +170,7 @@ public class MainForm extends JFrame implements ActionListener {
 		add(NationalEmblem);
 		add(jpb);
 		add(jpbDownText);
-		setTitle("·¨ÂÉ±¦µä");
+		setTitle("æ³•å¾‹å®å…¸");
 		setLayout(null);
 		setVisible(true);
 		setResizable(false);
