@@ -121,6 +121,7 @@ public class ThirdForm extends JFrame {
 
         //查询框相关设置
         search.setSize(820, 70);
+        search.setFont(new Font("宋体", 1, 35));
         search.setLocation(jScrollPane.getWidth() + 20, 10);
         ///按钮
         //向上
@@ -198,6 +199,7 @@ public class ThirdForm extends JFrame {
         setLayout(null);
         setVisible(true);
         setResizable(false);
+        textPane.setCaretPosition(0);//置顶
     }
 
     ///插入文字操作

@@ -134,7 +134,7 @@ public class MainForm extends JFrame implements ActionListener {
 			@Override
 			public void run() {
 				if(JProgressBarValue<JProgressBarMax){
-					JProgressBarValue+=2;
+					JProgressBarValue+=50;//默认为2
 					jpb.setValue(JProgressBarValue);
 					pictureLocationX+=6;
 					Matchman.setLocation(pictureLocationX,pictureLocationY);
@@ -173,7 +173,7 @@ public class MainForm extends JFrame implements ActionListener {
 		setTitle("法律宝典");
 		setLayout(null);
 		setVisible(true);
-		setResizable(true);
+		setResizable(false);
 		setBounds(500,250,420,500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}

@@ -77,6 +77,7 @@ public class SecondlyForm extends JFrame implements ActionListener {
 
         ///JScrollPane设置
         jScrollPane.setBounds(35, 25, 1260, 650);
+        jScrollPane.getVerticalScrollBar().setUnitIncrement(5);//设置滑块速度
 
         //主窗口设置
         add(jScrollPane);
