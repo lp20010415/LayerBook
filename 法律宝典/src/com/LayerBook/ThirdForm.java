@@ -46,7 +46,7 @@ public class ThirdForm extends JFrame {
         insertText(tablename + "\n", Color.black, 45, StyleConstants.ALIGN_CENTER);//插入文本
         textPane.setEditable(false);//设置禁止被编辑
         try {
-            JOptionPane.showMessageDialog(null,"将要加载数据，确定继续","加载",JOptionPane.INFORMATION_MESSAGE);
+
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url);
             Statement stm = con.createStatement();
@@ -216,6 +216,10 @@ public class ThirdForm extends JFrame {
             e.printStackTrace();
         }
     }
+}
+
+class GetData{
+
 }
 
 ///分编--字体同一在前者基础上减5

@@ -1,8 +1,6 @@
 package com.LayerBook;
 
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -134,7 +132,7 @@ public class MainForm extends JFrame implements ActionListener {
 			@Override
 			public void run() {
 				if(JProgressBarValue<JProgressBarMax){
-					JProgressBarValue+=50;//默认为2
+					JProgressBarValue+=2;//默认为2
 					jpb.setValue(JProgressBarValue);
 					pictureLocationX+=6;
 					Matchman.setLocation(pictureLocationX,pictureLocationY);
