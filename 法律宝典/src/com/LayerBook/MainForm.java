@@ -1,11 +1,15 @@
 package com.LayerBook;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -32,8 +36,8 @@ public class MainForm extends JFrame implements ActionListener {
 	JLabel leftText = new JLabel("<html><body>学<br>法<br>&nbsp;<br>守<br>法</body></html>",0);//左边文字
 	JLabel rightText = new JLabel("<html><body>懂<br>法<br>&nbsp;<br>用<br>法</body></html>",0);//右边文字
 	//启动图片
-	ImageIcon MatchmanPicture = new ImageIcon("./images/缩小版独火柴人.gif");
-	ImageIcon NationalEmblemPicture = new ImageIcon("./images/国徽.jpg");
+	ImageIcon MatchmanPicture = new ImageIcon(this.getClass().getResource("/images/缩小版独火柴人.gif"));
+	ImageIcon NationalEmblemPicture = new ImageIcon(this.getClass().getResource("/images/国徽.jpg"));
 
 	//操作组件
 	JLabel topText = new JLabel("法律类型",0);
@@ -47,12 +51,12 @@ public class MainForm extends JFrame implements ActionListener {
 	int btnWidth = 250;//按钮宽度
 	int btnHeight = 60;//按钮高度
 	//按钮图片
-	ImageIcon pIcon = new ImageIcon("./images/个人.png");
-	ImageIcon cIcon = new ImageIcon("./images/国家.png");
-	ImageIcon nIcon = new ImageIcon("./images/自然.png");
-	ImageIcon fIcon = new ImageIcon("./images/食品安全.png");
-	ImageIcon bIcon = new ImageIcon("./images/交易.png");
-	ImageIcon sIcon = new ImageIcon("./images/搜索.png");
+	ImageIcon pIcon = new ImageIcon(this.getClass().getResource("/images/个人.png"));
+	ImageIcon cIcon = new ImageIcon(this.getClass().getResource("/images/国家.png"));
+	ImageIcon nIcon = new ImageIcon(this.getClass().getResource("/images/自然.png"));
+	ImageIcon fIcon = new ImageIcon(this.getClass().getResource("/images/食品安全.png"));
+	ImageIcon bIcon = new ImageIcon(this.getClass().getResource("/images/交易.png"));
+	ImageIcon sIcon = new ImageIcon(this.getClass().getResource("/images/搜索.png"));
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -122,6 +126,7 @@ public class MainForm extends JFrame implements ActionListener {
 		Natural.addActionListener(this);
 		FoodSafe.addActionListener(this);
 		Business.addActionListener(this);
+
 		SearchAll.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -134,7 +139,7 @@ public class MainForm extends JFrame implements ActionListener {
 			@Override
 			public void run() {
 				if(JProgressBarValue<JProgressBarMax){
-					JProgressBarValue+=2;
+					JProgressBarValue+=2;//默认为2
 					jpb.setValue(JProgressBarValue);
 					pictureLocationX+=6;
 					Matchman.setLocation(pictureLocationX,pictureLocationY);
@@ -173,7 +178,7 @@ public class MainForm extends JFrame implements ActionListener {
 		setTitle("法律宝典");
 		setLayout(null);
 		setVisible(true);
-		setResizable(true);
+		setResizable(false);
 		setBounds(500,250,420,500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}

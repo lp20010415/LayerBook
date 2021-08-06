@@ -46,7 +46,7 @@ public class ThirdForm extends JFrame {
         insertText(tablename + "\n", Color.black, 45, StyleConstants.ALIGN_CENTER);//插入文本
         textPane.setEditable(false);//设置禁止被编辑
         try {
-            JOptionPane.showMessageDialog(null,"将要加载数据，确定继续","加载",JOptionPane.INFORMATION_MESSAGE);
+
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(url);
             Statement stm = con.createStatement();
@@ -121,6 +121,7 @@ public class ThirdForm extends JFrame {
 
         //查询框相关设置
         search.setSize(820, 70);
+        search.setFont(new Font("宋体", 1, 35));
         search.setLocation(jScrollPane.getWidth() + 20, 10);
         ///按钮
         //向上
@@ -198,6 +199,7 @@ public class ThirdForm extends JFrame {
         setLayout(null);
         setVisible(true);
         setResizable(false);
+        textPane.setCaretPosition(0);//置顶
     }
 
     ///插入文字操作
@@ -214,6 +216,10 @@ public class ThirdForm extends JFrame {
             e.printStackTrace();
         }
     }
+}
+
+class GetData{
+
 }
 
 ///分编--字体同一在前者基础上减5

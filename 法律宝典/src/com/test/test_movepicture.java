@@ -23,7 +23,7 @@ public class test_movepicture extends JFrame {
     JLabel rightText = new JLabel();
 
     JProgressBar jpb = new JProgressBar();
-    Icon i = new ImageIcon("./images/ËõĞ¡°æ¶À»ğ²ñÈË.gif");
+    Icon i = new ImageIcon("plugins/images/ËõĞ¡°æ¶À»ğ²ñÈË.gif");
     public static void main(String[] args){
         new test_movepicture();
     }
